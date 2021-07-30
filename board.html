@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Practice HTML</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<script src="chessboardjs/js/chessboard-1.0.0.min.js"></script>
+	<link rel="stylesheet" href="chessboardjs/css/chessboard-1.0.0.min.css">
+	<style>
+		.white-1e1d7 {
+			background-color: rgb(232, 235, 239);
+		}
+
+		.black-3c85d {
+			background-color: rgb(125, 135, 150);
+		}
+	</style>
+</head>
+<body>
+	<div class="jumbotron text-center">
+		<h1 class="display-4">Chessboard</h1>
+	</div>
+	<div class="container">
+		<div id="mainBoard" style="max-width:500px"></div>
+	</div>
+	<script>
+const chessboardConfig = {
+	draggable: true,
+	position: 'start',
+	pieceTheme: 'pieces/{piece}.png'
+}
+
+var board = Chessboard('mainBoard', chessboardConfig)
+	</script>
+</body>
+</html>
